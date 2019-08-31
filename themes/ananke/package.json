@@ -17,4 +17,9 @@
     "url": "https://github.com/theNewDynamic/thenewdynamic.com/issues"
   },
   "homepage": "https://github.com/theNewDynamic/thenewdynamic.com#readme"
+
+  "dependencies": {
+    "lodash.template": ">=4.5.0"
+  }
+
 }
