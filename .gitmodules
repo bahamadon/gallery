@@ -2,3 +2,18 @@
 	path = public
 	url = git@github.com:bahamadon/bahamadon.github.io.git
 	branch = master
+[submodule "themes/hugo-future-imperfect-slim"]
+	path = themes/hugo-future-imperfect-slim
+	url = https://github.com/pacollins/hugo-future-imperfect-slim.git
+[submodule "themes/twentynineteen-hugo"]
+	path = themes/twentynineteen-hugo
+	url = https://github.com/jeremybise/twentynineteen-hugo.git
+[submodule "themes/sam"]
+	path = themes/sam
+	url = https://github.com/victoriadrake/hugo-theme-sam.git
+[submodule "themes/hugo_theme_pickles"]
+	path = themes/hugo_theme_pickles
+	url = https://github.com/mismith0227/hugo_theme_pickles.git
+[submodule "themes/mediumish-gohugo-theme"]
+	path = themes/mediumish-gohugo-theme
+	url = https://github.com/lgaida/mediumish-gohugo-theme.git
