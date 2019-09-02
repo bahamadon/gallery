@@ -18,5 +18,5 @@
 	path = themes/mediumish-gohugo-theme
 	url = https://github.com/lgaida/mediumish-gohugo-theme.git
 [submodule "themes/arabica2"]
-	path = themes/arabica2
+	path = themes/arabica
 	url = https://github.com/nirocfz/arabica.git
