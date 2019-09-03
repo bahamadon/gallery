@@ -1,6 +1,6 @@
 baseurl                 = "https://example.com/"
 DefaultContentLanguage  = "en"
-title                   = "Hugo Future Imperfect Slim"
+title                   = "Hugo Arabica"
 theme                   = "arabica"
 preserveTaxonomyNames   = true
 paginate                = 3
