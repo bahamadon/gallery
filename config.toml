@@ -1,370 +1,147 @@
-baseurl                 = "https://example.com/"
-DefaultContentLanguage  = "en"
-title                   = "Hugo Arabica"
-theme                   = "arabica"
-preserveTaxonomyNames   = true
-paginate                = 3
-disqusShortname         = ""
-googleAnalytics         = ""
-pluralizeListTitles     = false
-disableLanguages        = [""]
+baseurl = "https://example.org/"
+languageCode = "en-us"
+title = "Strata"
+theme = "hugo-strata-theme"
+disqusShortname = "spf13"
+# Enable Google Analytics by inserting your tracking code
+googleAnalytics = ""
+# Define how many posts should appear on a site
+paginate = 10
 
 [params]
-  mainSections = ["blog", "post"]
-  # Loads CSS and JavaScript files. The variable is an array so that you can load
-  # multiple/additional files if necessary. The standard theme files can be loaded
-  # by adding the value, "default". Default includes the add-on.css and and-on.js.
-  # Example: ["default", "/path/to/file"]
-  cssFiles              = ["default"]
-  jsFiles               = ["default"]
-  # Sets options for highlight.js
-  highlightjs           = true
-  highlightjsTheme      = "github"
-  highlightjsLang       = ["html", "css", "js", "toml"]
-  # Sets where "View More Posts" links to
-  viewMorePostsLink     = "/blog/"
-  # Activate Estimated Reading Times, which appear in the post headers
-  readingTime           = true
-  # Sets which Social Share links appear in posts.
-  # Options are twitter, facebook, reddit, linkedin, pinterest, email
-  socialShare           = ["twitter", "facebook", "reddit", "linkedin",
-                          "pinterest", "email"]
+	# To provide some metadata for search engines feel free to add a few
+    # information about you and your website.
+	name = "Your name"
+	description = "Describe your website"
 
-  [params.meta]
-    # Sets the meta tag description
-    description         = "A theme by HTML5 UP, ported by Julio Pescador. Slimmed and enhanced by Patrick Collins. Multilingual by StatnMap. Powered by Hugo."
-    # Sets the meta tag author
-    author              = "HTML5UP and Hugo"
-    # If you would like to add more comprehensive favicon support passed root
-    # directory favicon.ico, utlize this funtion. It is recommened to use
-    # https://realfavicongenerator.net to generate your icons as that is the basis
-    # for the theme's naming.
-    favicon             = false
-    svg                 = true
-    faviconVersion      = "1"
-    msColor             = "#ffffff" # Copy from the https://realfavicongenerator.net
-    iOSColor            = "#ffffff" # Copy from the https://realfavicongenerator.net
+	# Format dates with Go's time formatting
+	date_format = "2006-01-02"
 
-  [params.header]
-    # Sets the navbarTitle that appears in the top left of the navigation bar
-    navbarTitle         = "Future Imperfect"
-    # Sets navbarTitle to match the section of the website
-    dynamicTitles       = true
-    searchMenu          = true
-    shareMenu           = true
-    languageMenu        = true
+	# Add read time estimates in the format "X min read"
+	show_read_time = false
 
-  # These are optional params related to the sidebar. They are recommended, but not
-  # required for proper functionality. HTML is supported within the params.
-  [params.intro]
-    header                = "Hugo Future Imperfect Slim"
-    paragraph             = "Another fine, responsive site template by <a href='http://html5up.net'>HTML5 UP</a>."
-    rssIntro              = true
-    socialIntro           = true
+	# Add custom assets with their paths relative to the static folder
+	custom_js   = []
+	custom_css  = []
 
-    # This appears at the top of the sidebar above params.intro.header.
-    # A width of less than 100px is recommended from a design perspective.
-    [params.intro.pic]
-      src                 = "/img/main/logo.jpg"
-      # Masks image in a certain shape. Supported are circle, triangle, diamond, and hexagon.
-      shape               = "circle"
-      width               = ""
-      alt                 = "Hugo Future Imperfect Slim"
 
-  [params.sidebar]
-    about               = "test"
-    # Sets the number of recent posts to show in the sidebar. The default value is 5.
-    postAmount          = 5
-    # set to show or to hide categories in the sidebar
-    categories          = true
-    # Sets Categories to sort by number of posts instead of alphabetical
-    categoriesByCount   = true
+	[params.sidebar]
+		# Replace the avatar with a picture of your own under static/images
+		avatar = "avatar.jpg"
+		# Use Markdown to format the string. This works nearly all over the theme
+		bio = "**I'm Strata**, a super simple<br> responsive site template freebie<br> crafted by [HTML5 UP](//html5up.net)."
+		# The icons will be shown if you enter your username
+		twitter = "spf13"
+		github = "spf13"
+		gitlab = "spf13"
+		dribbble = ""
+		facebook = ""
+		googleplus = ""
+		flickr = ""
+		linkedin = ""
 
-  [params.footer]
-    # Sets RSS icons to appear on the sidebar with the social media buttons
-    rssFooter           = true
-    # Sets Social Media icons to appear on the sidebar
-    socialFooter        = true
+		copyright = [
+			"&copy; John Doe",
+			"Design: [HTML5 UP](//html5up.net)",
+			"Demo Images: [Unsplash](//unsplash.com/)"
+		]
 
-  # Disqus will take priority over Staticman (github.com/eduardoboucas/staticman)
-  # due to its ease of use. Feel free to check out both and decide which you would
-  # prefer to use. See staticman.yml for additional settings.
-  [params.staticman]
-    # If using GitHub, go to https://github.com/apps/staticman-net
-    # If using GitLab, just add the GitLab bot, NO need to hit `/connect/v3/...`
-    enabled             = false
-    api                 = ""  # without trailing slash, defaults to "staticman3.herokuapp.com"
-    gitProvider         = "github"  # either "github" or "gitlab"
-    username            = ""
-    repo                = ""
-    branch              = ""
 
-    [params.staticman.recaptcha]
-      # Both keys must be present to enable recaptcha
-      siteKey           = "" # Site Key
-      encryptedKey      = ""
+	[params.about]
+		hide  = false
+		title = "Ipsum lorem dolor aliquam ante commodo magna sed accumsan arcu neque."
+		content = "Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia."
 
-[menu]
-  # Sets the menu items in the navigation bar
-  # Identifier prepends a Font Awesome icon to the menu item
-  [[menu.main]]
-    name              = "Home"
-    identifier        = "home"
-    url               = "/"
-    pre               = "<i class='fa fa-home'></i>"
-    weight            = 1
 
-  [[menu.main]]
-    name              = "About"
-    identifier        = "about"
-    url               = "/about/"
-    pre               = "<i class='far fa-id-card'></i>"
-    weight            = 2
+	[params.portfolio]
+		hide  = false
+		title = "Recent Work"
 
-  [[menu.main]]
-    name              = "Blog"
-    identifier        = "blog"
-    url               = "/blog/"
-    pre               = "<i class='far fa-newspaper'></i>"
-    weight            = 3
+		# The images and thumbnails are stored under static/images
+		# Create and change subfolders as you like
+		[[params.portfolio.gallery]]
+			image = "fulls/01.jpg"
+			thumb = "thumbs/01.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
 
-  [[menu.main]]
-    name              = "Categories"
-    identifier        = "categories"
-    url               = "/categories/"
-    pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 5
+		[[params.portfolio.gallery]]
+			image = "fulls/02.jpg"
+			thumb = "thumbs/02.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
 
-  [[menu.main]]
-    name              = "Contact"
-    identifier        = "contact"
-    url               = "/contact/"
-    pre               = "<i class='far fa-envelope'></i>"
-    weight            = 6
+		[[params.portfolio.gallery]]
+			image = "fulls/03.jpg"
+			thumb = "thumbs/03.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
 
-[Languages]
-  # Each language has its own menu.
-  [Languages.en]
-    LanguageCode        = "en"
-    LanguageName        = "English"
-    weight              = 1
+		[[params.portfolio.gallery]]
+			image = "fulls/04.jpg"
+			thumb = "thumbs/04.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
 
-  [Languages.de]
-    LanguageCode        = "de"
-    LanguageName        = "Deutsch"
-    title               = "Hugo Future Imperfect Slim auf deutsch"
-    description         = "Ein Thema von HTML5 UP, portiert von Julio Pescador.  Vereinfacht und verbessert von Patrick Collins. Mehrsprachig von StatnMap. Unterstützt von: Hugo. "
-    weight              = 2
+		[[params.portfolio.gallery]]
+			image = "fulls/05.jpg"
+			thumb = "thumbs/05.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
 
-    [[Languages.de.menu.main]]
-      name              = "Startseite"
-      identifier        = "home"
-      url               = "/"
-      pre               = "<i class='fas fa-home'></i>"
-      weight            = 1
+		[[params.portfolio.gallery]]
+			image = "fulls/06.jpg"
+			thumb = "thumbs/06.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
 
-    [[Languages.de.menu.main]]
-      name              = "Über mich"
-      identifier        = "about"
-      url               = "/about/"
-      pre               = "<i class='far fa-id-card'></i>"
-      weight            = 2
+	[params.recentposts]
+		hide  = false
+		title = "Recent blog posts"
 
-    [[Languages.de.menu.main]]
-      name              = "Blog"
-      identifier        = "blog"
-      url               = "/blog/"
-      pre               = "<i class='far fa-newspaper'></i>"
-      weight            = 3
+	[params.contact]
+		hide  = false
+		title = "Get In Touch"
+		content = "Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor."
 
-    [[Languages.de.menu.main]]
-      name              = "Kategorien"
-      identifier        = "categories"
-      url               = "/categories/"
-      pre               = "<i class='fas fa-sitemap'></i>"
-      weight            = 5
+		# This can be exact coordinates or a searchable address in google maps
+		gmaps_address = "39.7889055,-120.5443524"
+		address = [
+			"1234 Somewhere Rd.",
+			"Nashville, TN 00000",
+			"United States"
+		]
+		phone = "000-000-0000"
 
-    [[Languages.de.menu.main]]
-      name              = "Kontakt"
-      identifier        = "contact"
-      url               = "/contact/"
-      pre               = "<i class='far fa-envelope'></i>"
-      weight            = 6
+		# Since this template is static, the contact form uses www.formspree.io as a
+		# proxy. The form makes a POST request to their servers to send the actual
+		# email. Visitors can send up to a 1000 emails each month for free.
+	    #
+	    # What you need to do for the setup?
+	    #
+	    # - set your email address under 'email' below
+	    # - upload the generated site to your server
+	    # - send a dummy email yourself to confirm your account
+	    # - click the confirm link in the email from www.formspree.io
+	    # - you're done. Happy mailing!
+		email = "hello@example.com"
 
-  [Languages.fr]
-    LanguageCode        = "fr"
-    LanguageName        = "Français"
-    title               = "Hugo Future Imperfect Slim en français"
-    description         = "Un thème par HTML5 UP, porté par Julio Pescador. Simplifié et amélioré par Patrick Collins. Multilingue par StatnMap. Propulsé par Hugo."
-    weight              = 2
+		[params.contact.form]
+			# Set custom strings for the form if your native
+			# language isn't English
+			name = "Name"
+			email = "Email"
+			message = "Message"
+			submit = "Send message"
 
-    [[Languages.fr.menu.main]]
-      name              = "Accueil"
-      identifier        = "home"
-      url               = "/"
-      pre               = "<i class='fas fa-home'></i>"
-      weight            = 1
 
-    [[Languages.fr.menu.main]]
-      name              = "About"
-      identifier        = "about"
-      url               = "/about/"
-      pre               = "<i class='far fa-id-card'></i>"
-      weight            = 2
+# Menu links that appear on the left sidebar
+[[menu.main]]
+	name = "Home"
+	url  = "/"
+	weight = 10
 
-    [[Languages.fr.menu.main]]
-      name              = "Blog"
-      identifier        = "blog"
-      url               = "/blog/"
-      pre               = "<i class='far fa-newspaper'></i>"
-      weight            = 3
-
-    [[Languages.fr.menu.main]]
-      name              = "Catégories"
-      identifier        = "categories"
-      url               = "/categories/"
-      pre               = "<i class='fas fa-sitemap'></i>"
-      weight            = 5
-
-    [[Languages.fr.menu.main]]
-      name              = "Contact"
-      identifier        = "contact"
-      url               = "/contact/"
-      pre               = "<i class='far fa-envelope'></i>"
-      weight            = 6
-
-  [Languages.pl]
-    LanguageCode        = "pl"
-    LanguageName        = "Polski"
-    title               = "Hugo Future Imperfect Slim po polsku"
-    description         = "Motyw HTML5 UP, przeniesiony przez Julio Pescadora i wzbogacony przez Patricka Collinsa. Wielojęzyczny przez StatnMap. Zasilany przez Hugo."
-    weight              = 2
-
-    [[Languages.pl.menu.main]]
-      name              = "Home"
-      identifier        = "home"
-      url               = "/"
-      pre               = "<i class='fas fa-home'></i>"
-      weight            = 1
-
-    [[Languages.pl.menu.main]]
-      name              = "O mnie"
-      identifier        = "about"
-      url               = "/about/"
-      pre               = "<i class='far fa-id-card'></i>"
-      weight            = 2
-
-    [[Languages.pl.menu.main]]
-      name              = "Blog"
-      identifier        = "blog"
-      url               = "/blog/"
-      pre               = "<i class='far fa-newspaper'></i>"
-      weight            = 3
-
-    [[Languages.pl.menu.main]]
-      name              = "Kategorie"
-      identifier        = "categories"
-      url               = "/categories/"
-      pre               = "<i class='fas fa-sitemap'></i>"
-      weight            = 5
-
-    [[Languages.pl.menu.main]]
-      name              = "Kontakt"
-      identifier        = "contact"
-      url               = "/contact/"
-      pre               = "<i class='far fa-envelope'></i>"
-      weight            = 6
-
-  [Languages.pt]
-    LanguageCode        = "pt"
-    LanguageName        = "Português"
-    title               = "Hugo Future Imperfect Slim em português"
-    description         = "Um tema do HTML5 UP, portado por Julio Pescadora e reduzido por Patrick Collins. Multilíngue por StatnMap. Feito com Hugo."
-    weight              = 4
-
-    [[Languages.pt.menu.main]]
-      name              = "Início"
-      identifier        = "home"
-      url               = "/"
-      pre               = "<i class='fas fa-home'></i>"
-      weight            = 1
-
-    [[Languages.pt.menu.main]]
-      name              = "Sobre"
-      identifier        = "about"
-      url               = "/about/"
-      pre               = "<i class='far fa-id-card'></i>"
-      weight            = 2
-
-    [[Languages.pt.menu.main]]
-      name              = "Blog"
-      identifier        = "blog"
-      url               = "/blog/"
-      pre               = "<i class='far fa-newspaper'></i>"
-      weight            = 3
-
-    [[Languages.pt.menu.main]]
-      name              = "Categorias"
-      identifier        = "categories"
-      url               = "/categories/"
-      pre               = "<i class='fas fa-sitemap'></i>"
-      weight            = 5
-
-    [[Languages.pt.menu.main]]
-      name              = "Contato"
-      identifier        = "contact"
-      url               = "/contact/"
-      pre               = "<i class='far fa-envelope'></i>"
-      weight            = 6
-
-# Sets Social Media icons to appear and link to your account. Value should be your
-# username unless otherwise noted. These are the icons affected by socialAppearAtTop
-# and socialAppearAtBottom.
-[social]
-  # Coding Communities
-  github                = "pacollins/hugo-future-imperfect-slim"
-  gitlab                = ""
-  stackoverflow         = "" # User Number
-  bitbucket             = ""
-  jsfiddle              = ""
-  codepen               = ""
-  # Visual Art Communities
-  deviantart            = ""
-  flickr                = "example"
-  behance               = ""
-  dribbble              = ""
-  # Publishing Communities
-  wordpress             = ""
-  medium                = ""
-  # Professional/Business Oriented Communities
-  linkedin              = "example"
-  linkedin_company      = "examplebusiness"
-  foursquare            = ""
-  xing                  = ""
-  slideshare            = ""
-  # Social Networks
-  facebook              = "example"
-  googleplus            = ""
-  reddit                = "example"
-  quora                 = ""
-  youtube               = ""
-  vimeo                 = ""
-  whatsapp              = "" # WhatsApp Number
-    # WeChat and QQ need testing.
-    wechat              = ""
-    qq                  = "" # User ID Number
-  instagram             = "example"
-  tumblr                = ""
-  twitter               = "example"
-  skype                 = ""
-  snapchat              = ""
-  pinterest             = "example"
-  telegram              = "example"
-  vine                  = ""
-  googlescholar         = ""
-  orcid                 = ""
-  researchgate          = "example"
-  keybase               = "example"
-  mastodon              = "example.com/@example"
-  # Email
-  email                 = "example"
+[[menu.main]]
+	name = "Blog"
+	url  = "post/"
+	weight = 0
